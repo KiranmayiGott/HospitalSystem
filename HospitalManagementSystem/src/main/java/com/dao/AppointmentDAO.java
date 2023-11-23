@@ -150,7 +150,7 @@ public class AppointmentDAO {
 	public boolean updateCommentStatus(int id, int doctId, String status) {
 		boolean f = false;
 		try {
-			String sql = "update appointment set status=? where id=? and doctor_id=?";
+			String sql = "update appointment set comment=? and status='Completed' where id=? and doctor_id=?";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, status);
 			ps.setInt(2, id);
