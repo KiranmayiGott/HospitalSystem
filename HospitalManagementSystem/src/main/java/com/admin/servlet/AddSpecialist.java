@@ -30,10 +30,10 @@ public class AddSpecialist extends HttpServlet {
 		HttpSession session = req.getSession();
 
 		if (f) {
-			session.setAttribute("succMsg", "Specialist Added");
+			session.setAttribute("succMsg", "Speciality Added");
 			resp.sendRedirect("admin/index.jsp");
 		} else {
-			session.setAttribute("errorMsg", "Adding Specialist Failed");
+			session.setAttribute("errorMsg", "Adding Speciality Failed");
 			resp.sendRedirect("admin/index.jsp");
 		}
 	}
